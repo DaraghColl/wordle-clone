@@ -19,11 +19,24 @@ const checkInputAnswer = (item: HTMLInputElement, rowItemIndex: number) => {
   }
 };
 
+const findNextInput = (item: HTMLInputElement, rowItemIndex: number) => {
+  const nextItem = item.nextElementSibling as HTMLInputElement;
+  if (nextItem.classList.contains('letter-correct')) {
+    console.log('letter correct');
+    findNextInput(nextItem, rowItemIndex);
+    return;
+  } else {
+    nextItem.disabled = false;
+    nextItem.focus();
+  }
+};
+
 const rowItemInputEvent = (event: InputEvent, rowItemIndex: number) => {
   const target = event.target as HTMLInputElement;
   target.disabled = true;
 
   checkInputAnswer(target, rowItemIndex);
+  findNextInput(target, rowItemIndex);
 };
 
 const createRowItem = (rowItemIndex: number, row: number) => {
