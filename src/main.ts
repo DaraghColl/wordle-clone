@@ -21,8 +21,9 @@ const checkInputAnswer = (item: HTMLInputElement, rowItemIndex: number) => {
 
 const findNextInput = (item: HTMLInputElement, rowItemIndex: number) => {
   const nextItem = item.nextElementSibling as HTMLInputElement;
+
+  // if letter already answered, check for next input again
   if (nextItem.classList.contains('letter-correct')) {
-    console.log('letter correct');
     findNextInput(nextItem, rowItemIndex);
     return;
   } else {
