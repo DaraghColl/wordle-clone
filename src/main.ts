@@ -9,7 +9,7 @@ const checkIfLetterCorrect = (item: HTMLInputElement, rowItemIndex: number) => {
   }
 };
 
-const rowItemInput = (event: InputEvent, rowItemIndex: number) => {
+const rowItemInputEvent = (event: InputEvent, rowItemIndex: number) => {
   const target = event.target as HTMLInputElement;
   target.disabled = true;
 
@@ -28,7 +28,7 @@ const createRowItem = (rowItemIndex: number, row: number) => {
     rowItem.disabled = true;
   }
 
-  rowItem.addEventListener('input', (event: any) => rowItemInput(event, rowItemIndex));
+  rowItem.addEventListener('input', (event: any) => rowItemInputEvent(event, rowItemIndex));
 
   return rowItem;
 };
