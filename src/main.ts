@@ -3,7 +3,7 @@ import './style.css';
 const wordleGrid = document.querySelector('.grid');
 const word = 'catch';
 
-const checkIfLetterCorrect = (item: HTMLInputElement, rowItemIndex: number) => {
+const checkInputAnswer = (item: HTMLInputElement, rowItemIndex: number) => {
   if (item.value.toLowerCase() === word[rowItemIndex]) {
     item.classList.add('letter-correct');
   }
@@ -13,7 +13,7 @@ const rowItemInputEvent = (event: InputEvent, rowItemIndex: number) => {
   const target = event.target as HTMLInputElement;
   target.disabled = true;
 
-  checkIfLetterCorrect(target, rowItemIndex);
+  checkInputAnswer(target, rowItemIndex);
 };
 
 const createRowItem = (rowItemIndex: number, row: number) => {
