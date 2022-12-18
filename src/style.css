@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
   --color-correct: #6ee7b7;
   --color-incorrect: #94a3b8;
@@ -11,17 +13,32 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
   background-color: var(--background-color-light);
 }
 
+.navbar {
+  padding: 1rem;
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+  border-bottom: 1px solid var(--accent-color-light);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
 .container {
-  height: 100vh;
+  height: 85vh;
   display: flex;
   align-items: center;
   padding: 0 4rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
 }
 
 .game-controls {
