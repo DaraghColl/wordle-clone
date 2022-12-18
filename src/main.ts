@@ -74,10 +74,11 @@ const createRowItem = (rowItemIndex: number, row: number) => {
   rowItem.setAttribute('row', row.toString());
   rowItem.setAttribute('row-item', rowItemIndex.toString());
   rowItem.classList.add('grid__item');
+  rowItem.disabled = true;
 
   // disable all inputs inputs except first input
-  if (rowItemIndex !== 0 && row === 0) {
-    rowItem.disabled = true;
+  if (rowItemIndex === 0 && row === 0) {
+    rowItem.disabled = false;
   }
 
   rowItem.addEventListener('input', (event: any) => rowItemInputEvent(event, rowItemIndex));
