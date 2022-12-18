@@ -33,9 +33,15 @@ body {
   height: 85vh;
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  padding: 0 4rem;
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 4rem;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .navbar {
@@ -105,12 +111,17 @@ body {
 .grid__item {
   width: 100%;
   padding: 1rem;
-  font-size: 4rem;
   text-align: center;
   background-color: var(--accent-color-light);
   color: var(--text-color-light);
   border: none;
   border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  .grid__item {
+    font-size: 4rem;
+  }
 }
 
 .grid__item:focus {
