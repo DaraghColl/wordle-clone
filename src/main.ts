@@ -34,6 +34,9 @@ const checkInputAnswer = (item: HTMLInputElement, rowItemIndex: number) => {
         rowItem.disabled = true;
         rowItem.classList.add('letter-correct');
       });
+    } else {
+      item.classList.add('letter-incorrect');
+      setTimeout(() => item.classList.remove('letter-incorrect'), 1000);
     }
 
     checkGameStatus(item);
