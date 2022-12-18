@@ -35,7 +35,7 @@ const checkInputAnswer = (item: HTMLInputElement, rowItemIndex: number) => {
         rowItem.disabled = true;
         rowItem.classList.add('letter-correct');
       });
-    } else if (word.includes(item.value)) {
+    } else if (word.includes(item.value.toLowerCase())) {
       item.classList.add('letter-exists');
     } else {
       item.classList.add('letter-incorrect');
