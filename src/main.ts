@@ -9,6 +9,7 @@ const gameState = {
 const wordStatus: Record<string, boolean> = {};
 word.split('').forEach((key) => (wordStatus[key.toLowerCase()] = false));
 
+/** GAME LOGIC */
 const checkGameStatus = (item: HTMLInputElement) => {
   const allLettersCorrect = Object.values(wordStatus).every((value) => value === true);
 
@@ -94,3 +95,10 @@ const createRow = (row: number) => {
 for (let i = 0; i <= 3; i++) {
   createRow(i);
 }
+
+/** GAME CONTROLS **/
+const startGame = document.querySelector('#start_game_button') as HTMLElement;
+const gameControlsContainer = document.querySelector('#start_controls_container') as HTMLElement;
+startGame?.addEventListener('click', () => {
+  gameControlsContainer.style.display = 'none';
+});

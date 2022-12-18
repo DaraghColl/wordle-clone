@@ -5,7 +5,50 @@
 }
 
 body {
-  padding: 4rem;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 4rem;
+}
+
+.game-controls {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.game-controls-container {
+  min-width: 500px;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.game-controls__start-button {
+  height: 3rem;
+  border-radius: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #f1f5f9;
+  color: #334155;
+  border: 0 solid #e5e7eb;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .grid {
